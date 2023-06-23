@@ -1,11 +1,11 @@
 :root {
     --var-light-purple: rgb(180, 116, 165);
-    --var-lighter-purple: rgb(172, 142, 165);
+    --var-lighter-purple: rgb(213, 157, 199);
     --var-bluish-purple: rgb(49,52,61);
 }
 
 * {
-    border: 1px solid black;
+    border: 0px solid transparent;
     font-family: Arial, Helvetica, sans-serif;
 }
 
@@ -18,21 +18,21 @@
     height: 15%;
     background-color: var(--var-bluish-purple);
     z-index: 1;
+    background-image: linear-gradient(to bottom, rgb(59, 37, 54), rgba(55, 43, 56, 0.841), rgba(56, 9, 54, 0.101), rgb(49, 52, 61), rgb(55, 43, 56));
 }
-
 
 #header-name {
     display: flex;
     align-items: center;
-    justify-content: flex-end;
-    margin-right: 700px;
-    padding-left: 75px;
     background-color: var(--var-light-purple);
-    height: 70px;
-    padding-right: 25px;
-    width: 35%;
+    height: 80px; 
+    padding-left: 60px;
+    padding-right: 35px;
     font-size: 33px;
     font-weight: bold;
+    box-shadow: inset 0 0 10px 10px rgb(22 3 14 / 10%);
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
 }
 #header-name h1 {
     color: var(--var-bluish-purple);
@@ -42,6 +42,7 @@
     justify-content: flex-end;
     align-items: center;
     background-color: transparent;
+    width: 75%;
 }
 
 #nav-links {
@@ -72,9 +73,11 @@ main {
 .hero {
     height: 350px;
     position: relative;
-    background-image: url(./images/splash.jfif);
+    background-image: url(./images/background-splash.jpg);
     background-size: cover;
     z-index: -1;
+    box-shadow: inset 0 0 0 1000px rgba(159, 28, 109, 0.2);
+    border-bottom: 7px solid rgb(120, 59, 120);
 }
 #hero-caption {
     display: flex;
@@ -82,11 +85,14 @@ main {
     align-items: center;
     background-color: var(--var-light-purple);
     width: 20%;
-    height: 70px;
-    font-size: 40px;
+    height: 20%;
+    font-size: 200%;
     float: right;
-    margin-top: 258px;
+    margin-top: 240px;
     margin-right: 87px;
+    flex-wrap: wrap;
+    box-shadow: inset 0 0 10px 10px rgb(22 3 14 / 10%); 
+    border-radius: 15px;
 }
 
 .about-me {
@@ -94,33 +100,47 @@ main {
     height: 250px;
     align-items: center;
 }
-#about-me-header {
+
+.about-me-flex {
     display: flex;
-    flex-grow: .55;
-    justify-content: flex-end;
-    padding-right: 30px;
+    align-items: center;
+    justify-content: flex-start;
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+#about-me-header {
+    position: relative;
+    display: flex;
+    justify-content: center;
     height: 180px;
     align-items: center;
+    width: 20%;
 }
 
 #about-me-header h2 {
-    text-align: right;
-    height: 110%;
-    width: 70%;
+    display: flex;
+    justify-content: flex-end;
+    height: 75%;
+    width: 80%;
     font-size: 38px;
-    text-align: right;
-    padding-right: 20px;
+    padding-left: 30%;
+    padding-right: 25px;
     border-right: 4px solid var(--var-light-purple);
     font-weight: bold;
     color: var(--var-light-purple);
     padding-top: 10px;
+    text-align: right;
 }
 
 #about-me-content {
     display: flex;
     flex-wrap: wrap;
-    margin-left: 20px;
+    margin-left: 35px;
     width: 75%;
+    height: 100%;
+    margin-top: 30px;
 }
 
 #about-me-content p {
@@ -176,7 +196,7 @@ main {
 }
 
 
-figcaption {
+.work figcaption {
     position: absolute;
     filter: none;
 }
@@ -192,10 +212,12 @@ figcaption {
 
 
 #work-header h2 {
+    display: flex;
+    justify-content: flex-end;
     height: 450%;
     width: 80%;
     font-size: 38px;
-    padding-left: 38%;
+    padding-left: 30%;
     padding-right: 25px;
     border-right: 4px solid var(--var-light-purple);
     font-weight: bold;
@@ -230,8 +252,13 @@ figcaption {
     width: 100%;
     height: 100%;
     z-index: -1;
-    filter: blur(2.5px);
+    filter: blur(3px);
 }
+
+#work-content figure {
+border-radius: 15px;
+}
+
 .work figcaption {
 top: 140px;
 padding-left: 15px;
@@ -240,53 +267,108 @@ padding-bottom: 15px;
 padding-right: 15px;
 background-color: var(--var-light-purple);
 color: var(--var-bluish-purple);
+box-shadow: inset 0 0 10px 10px rgb(22 3 14 / 10%);
+border-top-right-radius: 15px;
+border-bottom-right-radius: 15px;
 }
 .work figcaption h2 {
     font-weight: bold;
 }
 
+.work h3 {
+    padding-top: 5px;
+}
+
 .footer {
     display: flex;
     align-items: center;
-    height: 150px;
-    margin-top: 15px;
 }
 
+.footer-flex {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
 
 .contact-me {
+    position: relative;
     display: flex;
-    flex-grow: .3;
-    justify-content: flex-end;
-    padding-right: 30px;
+    justify-content: center;
+    height: 180px;
+    align-items: center;
+    width: 20%;
 }
 .contact-me h2 {
-    width: 70%;
+    display: flex;
+    justify-content: flex-end;
+    height: 75%;
+    width: 80%;
     font-size: 38px;
-    text-align: right;
-    padding-right: 20px;
+    padding-left: 30%;
+    padding-right: 25px;
     border-right: 4px solid var(--var-light-purple);
     font-weight: bold;
     color: var(--var-light-purple);
+    padding-top: 10px;
+    text-align: right;
+}
+
+#footer-links {
+    position: relative;
+    display: flex;
+    width: 100%;
 }
 
 #footer-anchors {
     display: flex;
     flex-direction: row;
+    justify-content: center;
 }
 
+#footer-anchors li:nth-of-type(1n+2) {
+    margin-left: 20%;
+
+}
 
 #footer-anchors li {
-    margin-left: 130px;
     padding-bottom: 4px;
     border-bottom: 3.5px solid var(--var-light-purple);
 }
 
-#footer-anchors li:first-of-type {
-    margin-left: 100px;
-}
 #footer-anchors a {
     text-decoration: none;
     font-weight: bold;
-    color: black;
+    color: rgb(120, 59, 120);
 }
 
+
+#footer-links {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    padding: 0px;
+    margin: 0px;
+    width: 80%;
+}
+
+#nav-links a:hover, #footer-anchors a:hover {
+    transition: ease-in-out .25s;
+    color: var(--var-lighter-purple);
+}
+#nav-links a:active, #footer-anchors a:active {
+    color: rgba(165, 78, 165, 0.395);
+}
+
+#work-box-1:hover, #work-box-2:hover, #work-box-3:hover, #work-box-4:hover, #work-box-5:hover {
+    cursor: grab;
+    transition: ease-in-out .35s;
+    box-shadow: inset 0 0 0 1000px rgba(103, 16, 70, 0.395);
+}
+#work-box-1:hover figcaption, #work-box-2:hover figcaption, #work-box-3:hover figcaption, #work-box-4:hover figcaption, #work-box-5:hover figcaption {
+    transition: ease-in-out .15s;
+    color: rgb(116, 50, 99);
+    scale: 103%;
+}
