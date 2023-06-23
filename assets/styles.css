@@ -17,6 +17,7 @@
     align-items: center;
     height: 15%;
     background-color: var(--var-bluish-purple);
+    z-index: 1;
 }
 
 
@@ -133,32 +134,116 @@ main {
     z-index: -1;
 }
 
+.work {
+    display: flex;
+    align-items: center;
+}
+
+.work-flex {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
 
 
+#work-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    padding: 0px;
+    margin: 0px;
+    width: 80%;
+}
+
+#work-box-1 {
+    display: flex;
+    width: 100%;
+    height: 250px;
+    box-shadow: inset 0 0 0 1000px rgba(159, 28, 109, 0.2);
+    position: relative;
+    border: 5px solid var(--var-light-purple);
+}
+
+#work-box-1 img {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    filter: blur(2.5px);
+}
 
 
+figcaption {
+    position: absolute;
+    filter: none;
+}
+
+#work-header {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    height: 180px;
+    align-items: center;
+    width: 20%;
+}
 
 
+#work-header h2 {
+    height: 450%;
+    width: 80%;
+    font-size: 38px;
+    padding-left: 38%;
+    padding-right: 25px;
+    border-right: 4px solid var(--var-light-purple);
+    font-weight: bold;
+    color: var(--var-light-purple);
+    padding-top: 10px;
+    text-align: right;
+}
 
+#work-box-2,
+#work-box-3,
+#work-box-4,
+#work-box-5 {
+    position: relative;
+    display: flex;
+    height: 250px;
+    width: 45%;
+    margin: 0;
+    box-shadow: inset 0 0 0 1000px rgba(159, 28, 109, 0.2);
+    border: 5px solid var(--var-light-purple);
+}
 
+#work-box-4, #work-box-5 {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+#work-box-2 img,
+#work-box-3 img,
+#work-box-4 img,
+#work-box-5 img {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    filter: blur(2.5px);
+}
+.work figcaption {
+top: 140px;
+padding-left: 15px;
+padding-top: 15px;
+padding-bottom: 15px;
+padding-right: 15px;
+background-color: var(--var-light-purple);
+color: var(--var-bluish-purple);
+}
+.work figcaption h2 {
+    font-weight: bold;
+}
 
 .footer {
     display: flex;
