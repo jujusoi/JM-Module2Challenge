@@ -1,14 +1,20 @@
+/* Var declarations */
+
 :root {
     --var-light-purple: rgb(180, 116, 165);
     --var-lighter-purple: rgb(213, 157, 199);
     --var-bluish-purple: rgb(49,52,61);
+    --var-box-shadow: inset 0 0 10px 10px rgb(22 3 14 / 10%);
 }
+
+/* End var declarations */
+
+/* Base CSS */
 
 * {
     border: 0px solid transparent;
     font-family: Arial, Helvetica, sans-serif;
 }
-
 .header {
     width: 100%;
     position: fixed;
@@ -20,7 +26,6 @@
     z-index: 1;
     background-image: linear-gradient(to bottom, rgb(59, 37, 54), rgba(55, 43, 56, 0.841), rgba(56, 9, 54, 0.101), rgb(49, 52, 61), rgb(55, 43, 56));
 }
-
 #header-name {
     display: flex;
     align-items: center;
@@ -30,7 +35,7 @@
     padding-right: 35px;
     font-size: 33px;
     font-weight: bold;
-    box-shadow: inset 0 0 10px 10px rgb(22 3 14 / 10%);
+    box-shadow: var(--var-box-shadow);
     border-top-right-radius: 15px;
     border-bottom-right-radius: 15px;
 }
@@ -44,14 +49,12 @@
     background-color: transparent;
     width: 75%;
 }
-
 #nav-links {
     display: flex;
     list-style: none;
     padding: 0;
     margin-right: 20px;
 }
-
 #nav-links li {
     margin-left: 20px;
     padding-bottom: 4px;
@@ -60,16 +63,13 @@
     color: var(--var-light-purple);
     border-bottom: 4px solid var(--var-light-purple);
 }
-
 #nav-links a {
     text-decoration: none;
     color: var(--var-light-purple);
 }
-
 main {
     margin-top: 100px;
 }
-
 .hero {
     height: 350px;
     position: relative;
@@ -91,16 +91,14 @@ main {
     margin-top: 240px;
     margin-right: 87px;
     flex-wrap: wrap;
-    box-shadow: inset 0 0 10px 10px rgb(22 3 14 / 10%); 
+    box-shadow: var(--var-box-shadow); 
     border-radius: 15px;
 }
-
 .about-me {
     display: flex;
     height: 250px;
     align-items: center;
 }
-
 .about-me-flex {
     display: flex;
     align-items: center;
@@ -109,7 +107,6 @@ main {
     height: 100%;
     position: relative;
 }
-
 #about-me-header {
     position: relative;
     display: flex;
@@ -118,7 +115,6 @@ main {
     align-items: center;
     width: 20%;
 }
-
 #about-me-header h2 {
     display: flex;
     justify-content: flex-end;
@@ -133,16 +129,13 @@ main {
     padding-top: 10px;
     text-align: right;
 }
-
 #about-me-content {
     display: flex;
     flex-wrap: wrap;
     margin-left: 35px;
     width: 75%;
-    height: 100%;
     margin-top: 30px;
 }
-
 #about-me-content p {
     display: flex;
     flex-wrap: wrap;
@@ -153,12 +146,10 @@ main {
     line-height: 135%;
     z-index: -1;
 }
-
 .work {
     display: flex;
     align-items: center;
 }
-
 .work-flex {
     display: flex;
     align-items: center;
@@ -167,8 +158,6 @@ main {
     height: 100%;
     position: relative;
 }
-
-
 #work-content {
     display: flex;
     flex-wrap: wrap;
@@ -177,7 +166,10 @@ main {
     margin: 0px;
     width: 80%;
 }
-
+#work-content a {
+    width: 100%;
+    height: 100%;
+}
 #work-box-1 {
     display: flex;
     width: 100%;
@@ -186,7 +178,6 @@ main {
     position: relative;
     border: 5px solid var(--var-light-purple);
 }
-
 #work-box-1 img {
     position: relative;
     width: 100%;
@@ -194,13 +185,10 @@ main {
     z-index: -1;
     filter: blur(2.5px);
 }
-
-
 .work figcaption {
     position: absolute;
     filter: none;
 }
-
 #work-header {
     position: relative;
     display: flex;
@@ -209,8 +197,6 @@ main {
     align-items: center;
     width: 20%;
 }
-
-
 #work-header h2 {
     display: flex;
     justify-content: flex-end;
@@ -225,7 +211,6 @@ main {
     padding-top: 10px;
     text-align: right;
 }
-
 #work-box-2,
 #work-box-3,
 #work-box-4,
@@ -238,12 +223,10 @@ main {
     box-shadow: inset 0 0 0 1000px rgba(159, 28, 109, 0.2);
     border: 5px solid var(--var-light-purple);
 }
-
 #work-box-4, #work-box-5 {
     margin-top: 20px;
     margin-bottom: 20px;
 }
-
 #work-box-2 img,
 #work-box-3 img,
 #work-box-4 img,
@@ -254,11 +237,9 @@ main {
     z-index: -1;
     filter: blur(3px);
 }
-
 #work-content figure {
 border-radius: 15px;
 }
-
 .work figcaption {
 top: 140px;
 padding-left: 15px;
@@ -267,23 +248,20 @@ padding-bottom: 15px;
 padding-right: 15px;
 background-color: var(--var-light-purple);
 color: var(--var-bluish-purple);
-box-shadow: inset 0 0 10px 10px rgb(22 3 14 / 10%);
+box-shadow: var(--var-box-shadow);
 border-top-right-radius: 15px;
 border-bottom-right-radius: 15px;
 }
 .work figcaption h2 {
     font-weight: bold;
 }
-
 .work h3 {
     padding-top: 5px;
 }
-
 .footer {
     display: flex;
     align-items: center;
 }
-
 .footer-flex {
     display: flex;
     align-items: center;
@@ -292,7 +270,6 @@ border-bottom-right-radius: 15px;
     height: 100%;
     position: relative;
 }
-
 .contact-me {
     position: relative;
     display: flex;
@@ -315,36 +292,29 @@ border-bottom-right-radius: 15px;
     padding-top: 10px;
     text-align: right;
 }
-
 #footer-links {
     position: relative;
     display: flex;
     width: 100%;
 }
-
 #footer-anchors {
     display: flex;
     flex-direction: row;
     justify-content: center;
 }
-
 #footer-anchors li:nth-of-type(1n+2) {
     margin-left: 20%;
 
 }
-
 #footer-anchors li {
     padding-bottom: 4px;
     border-bottom: 3.5px solid var(--var-light-purple);
 }
-
 #footer-anchors a {
     text-decoration: none;
     font-weight: bold;
     color: rgb(120, 59, 120);
 }
-
-
 #footer-links {
     display: flex;
     flex-wrap: wrap;
@@ -354,6 +324,11 @@ border-bottom-right-radius: 15px;
     width: 80%;
 }
 
+/* End base CSS */
+
+
+/* Pseudo stuffs */
+
 #nav-links a:hover, #footer-anchors a:hover {
     transition: ease-in-out .25s;
     color: var(--var-lighter-purple);
@@ -361,7 +336,6 @@ border-bottom-right-radius: 15px;
 #nav-links a:active, #footer-anchors a:active {
     color: rgba(165, 78, 165, 0.395);
 }
-
 #work-box-1:hover, #work-box-2:hover, #work-box-3:hover, #work-box-4:hover, #work-box-5:hover {
     cursor: grab;
     transition: ease-in-out .35s;
@@ -372,3 +346,75 @@ border-bottom-right-radius: 15px;
     color: rgb(116, 50, 99);
     scale: 103%;
 }
+
+/* Pseudo stuffs end */
+
+/* media query */
+
+@media only screen and (max-width: 926px) {
+    body {
+        width: 100%;
+    }
+    .hero {
+        width: 201%;
+    }
+    .header {
+        height: 10%;
+    }
+    .work-flex {
+        width: 200%;
+        justify-content: center;
+    }
+    #work-content figure:nth-of-type(1n+2) {
+        flex-direction: column;
+        width: 45%;
+        }
+    #about-me-content {
+        flex-direction: column;
+        font-size: 100%;
+        margin-left: 15px;
+        justify-content: center;
+    }
+    #about-me-content:last-of-type p {
+        margin-left: 10%;
+        width: 250%;
+    }
+    #about-me-content p {
+        width: 125%;
+    }
+    #about-me-header {
+        width: 70%;
+    }
+    #about-me-header h2 {
+        font-size: 30px;
+    }
+    .work {
+        display: block;
+    }
+    #work-header {
+            width: 10%;
+    }
+    #work-header h2 {
+        font-size: 30px;
+    }
+    #work-content {
+        width: 60%;
+        margin-left: 6%;
+    }
+    #footer-links {
+        width: 30%;
+        justify-content: flex-start;
+    }
+    #footer-anchors {
+        width: 100%;
+        justify-content: flex-start;
+        margin-left: 20%;
+    }
+    #footer-anchors li:nth-of-type(1n+2) {
+        margin-left: 15%;
+    }
+    .contact-me h2 {
+        font-size: 30px;
+    }
+}
+/* ^ Makes the website very receptive on smaller devices. you just gotta zoom out a bit :p */
